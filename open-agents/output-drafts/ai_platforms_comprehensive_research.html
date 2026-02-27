@@ -1,0 +1,2037 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive AI Platforms Research 2026</title>
+    <style>
+        :root {
+            --primary-blue: #4A90D9;
+            --light-blue: #E8F4FC;
+            --lighter-blue: #F5FAFF;
+            --gray-100: #F8F9FA;
+            --gray-200: #E9ECEF;
+            --gray-300: #DEE2E6;
+            --gray-600: #6C757D;
+            --gray-800: #343A40;
+            --success: #28A745;
+            --warning: #FFC107;
+            --danger: #DC3545;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--light-blue) 0%, var(--gray-100) 100%);
+            color: var(--gray-800);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, #2E5A8B 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(74, 144, 217, 0.3);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .toc {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .toc h2 {
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--light-blue);
+            padding-bottom: 10px;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 10px;
+        }
+
+        .toc a {
+            color: var(--gray-800);
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            background: var(--lighter-blue);
+            display: block;
+            transition: all 0.2s;
+        }
+
+        .toc a:hover {
+            background: var(--light-blue);
+            color: var(--primary-blue);
+            transform: translateX(5px);
+        }
+
+        .platform-section {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .platform-section h2 {
+            color: var(--primary-blue);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid var(--light-blue);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .platform-section h2 .number {
+            background: var(--primary-blue);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .platform-section h3 {
+            color: var(--gray-800);
+            margin: 20px 0 10px;
+            font-size: 1.2rem;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .info-card {
+            background: var(--lighter-blue);
+            border-radius: 8px;
+            padding: 20px;
+            border-left: 4px solid var(--primary-blue);
+        }
+
+        .info-card h4 {
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        .info-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .info-card li {
+            padding: 5px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .info-card li::before {
+            content: "•";
+            color: var(--primary-blue);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        @media (max-width: 768px) {
+            .pros-cons {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .pros {
+            background: #E8F5E9;
+            border-left: 4px solid var(--success);
+        }
+
+        .cons {
+            background: #FFEBEE;
+            border-left: 4px solid var(--danger);
+        }
+
+        .pros h4, .cons h4 {
+            color: var(--success);
+        }
+
+        .cons h4 {
+            color: var(--danger);
+        }
+
+        .code-block {
+            background: var(--gray-800);
+            color: #E8E8E8;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            overflow-x: auto;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .code-block .comment {
+            color: #6A9955;
+        }
+
+        .code-block .keyword {
+            color: #569CD6;
+        }
+
+        .code-block .string {
+            color: #CE9178;
+        }
+
+        .code-block .function {
+            color: #DCDCAA;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin: 2px;
+        }
+
+        .tag-async {
+            background: #E3F2FD;
+            color: #1565C0;
+        }
+
+        .tag-sync {
+            background: #FFF3E0;
+            color: #E65100;
+        }
+
+        .tag-parallel {
+            background: #E8F5E9;
+            color: #2E7D32;
+        }
+
+        .tag-hitl {
+            background: #F3E5F5;
+            color: #7B1FA2;
+        }
+
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95rem;
+        }
+
+        .specs-table th, .specs-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .specs-table th {
+            background: var(--light-blue);
+            color: var(--primary-blue);
+            font-weight: 600;
+        }
+
+        .specs-table tr:hover {
+            background: var(--lighter-blue);
+        }
+
+        .when-to-use {
+            background: #FFF8E1;
+            border-left: 4px solid var(--warning);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .when-to-use h4 {
+            color: #F57C00;
+            margin-bottom: 10px;
+        }
+
+        .step-by-step {
+            background: var(--gray-100);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+
+        .step-by-step h4 {
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+        }
+
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .step-number {
+            background: var(--primary-blue);
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .links-section {
+            margin-top: 20px;
+            padding: 15px;
+            background: var(--lighter-blue);
+            border-radius: 8px;
+        }
+
+        .links-section h4 {
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+        }
+
+        .links-section a {
+            color: var(--primary-blue);
+            text-decoration: none;
+            display: inline-block;
+            margin-right: 20px;
+            margin-bottom: 5px;
+        }
+
+        .links-section a:hover {
+            text-decoration: underline;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.85rem;
+        }
+
+        .comparison-table th {
+            background: var(--primary-blue);
+            color: white;
+            padding: 12px 8px;
+            text-align: center;
+        }
+
+        .comparison-table td {
+            padding: 10px 8px;
+            border: 1px solid var(--gray-200);
+            text-align: center;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background: var(--lighter-blue);
+        }
+
+        .comparison-table tr:hover {
+            background: var(--light-blue);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: var(--gray-600);
+            font-size: 0.9rem;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .badge-yes {
+            background: #C8E6C9;
+            color: #2E7D32;
+        }
+
+        .badge-no {
+            background: #FFCDD2;
+            color: #C62828;
+        }
+
+        .badge-partial {
+            background: #FFF9C4;
+            color: #F57F17;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Comprehensive AI Platforms Research 2026</h1>
+            <p>Deep dive into AI coding assistants, agents, frameworks, and automation tools</p>
+            <p style="margin-top: 10px; font-size: 0.9rem;">Generated: February 2026</p>
+        </header>
+
+        <nav class="toc">
+            <h2>Table of Contents</h2>
+            <div class="toc-grid">
+                <a href="#claude">1. Claude Code (Anthropic)</a>
+                <a href="#openai">2. OpenAI (Codex/Copilot)</a>
+                <a href="#gemini">3. Google Gemini</a>
+                <a href="#opencode">4. OpenCode</a>
+                <a href="#ollama">5. Ollama Local Models</a>
+                <a href="#n8n">6. N8n Automation</a>
+                <a href="#microsoft-agent">7. Microsoft Agent Framework</a>
+                <a href="#microsoft-foundry">8. Microsoft Foundry</a>
+                <a href="#openclaw">9. OpenClaw (Clawdbot)</a>
+                <a href="#comparison">10. Comparison & Specifications</a>
+            </div>
+        </nav>
+
+        <!-- Section 1: Claude Code -->
+        <section id="claude" class="platform-section">
+            <h2><span class="number">1</span> Claude Code (Anthropic)</h2>
+
+            <p>Claude Code is Anthropic's official CLI for Claude, providing a powerful terminal-based interface for AI-assisted software engineering. It features a comprehensive ecosystem of agents, subagents, skills, and MCP integrations.</p>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4>Core Capabilities</h4>
+                    <ul>
+                        <li>Terminal-based AI coding assistant</li>
+                        <li>Multi-agent orchestration with subagents</li>
+                        <li>Skills for dynamic expertise loading</li>
+                        <li>Model Context Protocol (MCP) support</li>
+                        <li>Background task execution</li>
+                        <li>IDE integration (VSCode, JetBrains)</li>
+                        <li>200K token context window (1M beta)</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h4>Agent Architecture</h4>
+                    <ul>
+                        <li><strong>Subagents:</strong> Isolated context windows, custom prompts, specific tool permissions</li>
+                        <li><strong>Skills:</strong> Portable folders with instructions loaded dynamically</li>
+                        <li><strong>MCP:</strong> Universal connection layer for external tools</li>
+                        <li><strong>Hooks:</strong> Shell commands triggered by events</li>
+                        <li><strong>Cowork:</strong> Human-AI collaboration mode</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pros-cons">
+                <div class="info-card pros">
+                    <h4>Advantages</h4>
+                    <ul>
+                        <li>Excellent code understanding and generation</li>
+                        <li>Strong safety and alignment features</li>
+                        <li>Parallel subagent execution</li>
+                        <li>Large context window (200K standard)</li>
+                        <li>Rich ecosystem of MCP tools</li>
+                        <li>Portable, reusable skills system</li>
+                        <li>Background task support</li>
+                    </ul>
+                </div>
+                <div class="info-card cons">
+                    <h4>Disadvantages</h4>
+                    <ul>
+                        <li>Requires API subscription</li>
+                        <li>No free tier for heavy usage</li>
+                        <li>Some features still in beta</li>
+                        <li>Learning curve for advanced features</li>
+                        <li>Dependent on internet connectivity</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="when-to-use">
+                <h4>When to Use Claude Code</h4>
+                <ul>
+                    <li>Complex multi-file refactoring projects</li>
+                    <li>When you need strong code safety and security analysis</li>
+                    <li>Long-context document analysis (up to 1M tokens)</li>
+                    <li>Multi-agent workflow orchestration</li>
+                    <li>Integration with external tools via MCP</li>
+                </ul>
+            </div>
+
+            <p><strong>Execution Modes:</strong>
+                <span class="tag tag-async">Async</span>
+                <span class="tag tag-sync">Sync</span>
+                <span class="tag tag-parallel">Parallel Subagents</span>
+                <span class="tag tag-hitl">Human-in-the-Loop</span>
+            </p>
+
+            <h3>Python SDK Example</h3>
+            <div class="code-block">
+<span class="comment"># Install: pip install anthropic</span>
+<span class="keyword">import</span> anthropic
+<span class="keyword">import</span> asyncio
+
+<span class="comment"># Synchronous call</span>
+client = anthropic.Anthropic()
+message = client.messages.create(
+    model=<span class="string">"claude-sonnet-4-20250514"</span>,
+    max_tokens=<span class="string">1024</span>,
+    messages=[
+        {<span class="string">"role"</span>: <span class="string">"user"</span>, <span class="string">"content"</span>: <span class="string">"Write a Python function to sort a list"</span>}
+    ]
+)
+<span class="function">print</span>(message.content[0].text)
+
+<span class="comment"># Asynchronous call</span>
+<span class="keyword">async def</span> <span class="function">async_call</span>():
+    client = anthropic.AsyncAnthropic()
+    message = <span class="keyword">await</span> client.messages.create(
+        model=<span class="string">"claude-sonnet-4-20250514"</span>,
+        max_tokens=<span class="string">1024</span>,
+        messages=[{<span class="string">"role"</span>: <span class="string">"user"</span>, <span class="string">"content"</span>: <span class="string">"Explain async/await"</span>}]
+    )
+    <span class="keyword">return</span> message
+
+<span class="comment"># Parallel calls</span>
+<span class="keyword">async def</span> <span class="function">parallel_calls</span>():
+    client = anthropic.AsyncAnthropic()
+    tasks = [
+        client.messages.create(model=<span class="string">"claude-sonnet-4-20250514"</span>, max_tokens=<span class="string">512</span>,
+                               messages=[{<span class="string">"role"</span>: <span class="string">"user"</span>, <span class="string">"content"</span>: f<span class="string">"Task {i}"</span>}])
+        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="function">range</span>(5)
+    ]
+    results = <span class="keyword">await</span> asyncio.gather(*tasks)
+    <span class="keyword">return</span> results
+            </div>
+
+            <h3>Claude Code CLI Usage</h3>
+            <div class="code-block">
+<span class="comment"># Install Claude Code</span>
+npm install -g @anthropic-ai/claude-code
+
+<span class="comment"># Start Claude Code</span>
+claude
+
+<span class="comment"># Use skills</span>
+/skill research "topic name"
+
+<span class="comment"># Run with specific model</span>
+claude --model claude-opus-4-20250514
+            </div>
+
+            <h3>CLAUDE.md Instructions File</h3>
+            <div class="code-block">
+<span class="comment"># CLAUDE.md - Project Instructions</span>
+<span class="comment"># Place in project root for automatic loading</span>
+
+## Project Overview
+This is a Python web application using FastAPI.
+
+## Coding Standards
+- Use type hints for all functions
+- Follow PEP 8 style guide
+- Write docstrings for public APIs
+
+## Key Files
+- src/main.py - Application entry point
+- src/api/ - API route handlers
+- tests/ - Test files
+            </div>
+
+            <div class="links-section">
+                <h4>Resources</h4>
+                <a href="https://code.claude.com/docs/en/sub-agents" target="_blank">Subagents Documentation</a>
+                <a href="https://claude.com/blog/skills-explained" target="_blank">Skills Explained</a>
+                <a href="https://www.anthropic.com/engineering/building-agents-with-the-claude-agent-sdk" target="_blank">Agent SDK Guide</a>
+            </div>
+        </section>
+
+        <!-- Section 2: OpenAI -->
+        <section id="openai" class="platform-section">
+            <h2><span class="number">2</span> OpenAI (Codex / Copilot)</h2>
+
+            <p>OpenAI's ecosystem includes Codex (AI coding partner), GitHub Copilot, and the Agents SDK for building sophisticated multi-agent systems. The platform supports MCP integration and can be orchestrated as part of larger workflows.</p>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4>Core Capabilities</h4>
+                    <ul>
+                        <li>GPT-4 Turbo and GPT-5 models</li>
+                        <li>Codex CLI and IDE extension</li>
+                        <li>GitHub Copilot integration</li>
+                        <li>Agents SDK for multi-agent systems</li>
+                        <li>MCP server support</li>
+                        <li>Function calling and tool use</li>
+                        <li>128K-400K token context windows</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h4>Agents SDK Features</h4>
+                    <ul>
+                        <li>Multi-agent orchestration</li>
+                        <li>Deterministic, auditable workflows</li>
+                        <li>Tool and function registration</li>
+                        <li>Streaming responses</li>
+                        <li>Custom model providers</li>
+                        <li>MCP integration for external tools</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pros-cons">
+                <div class="info-card pros">
+                    <h4>Advantages</h4>
+                    <ul>
+                        <li>Most widely adopted AI coding tools</li>
+                        <li>Excellent GitHub/IDE integration</li>
+                        <li>Strong function calling support</li>
+                        <li>Large ecosystem of plugins</li>
+                        <li>Well-documented APIs</li>
+                        <li>Multi-modal capabilities (vision, audio)</li>
+                    </ul>
+                </div>
+                <div class="info-card cons">
+                    <h4>Disadvantages</h4>
+                    <ul>
+                        <li>Higher cost for advanced models</li>
+                        <li>Rate limits on API calls</li>
+                        <li>Copilot requires subscription</li>
+                        <li>Some features US-only</li>
+                        <li>Context window smaller than competitors</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="when-to-use">
+                <h4>When to Use OpenAI/Codex</h4>
+                <ul>
+                    <li>GitHub-centric development workflows</li>
+                    <li>When you need broad IDE support</li>
+                    <li>Building production multi-agent systems</li>
+                    <li>When function calling is critical</li>
+                    <li>Teams already using GitHub Copilot</li>
+                </ul>
+            </div>
+
+            <p><strong>Execution Modes:</strong>
+                <span class="tag tag-async">Async</span>
+                <span class="tag tag-sync">Sync</span>
+                <span class="tag tag-parallel">Parallel Agents</span>
+                <span class="tag tag-hitl">Human-in-the-Loop</span>
+            </p>
+
+            <h3>Python SDK Example</h3>
+            <div class="code-block">
+<span class="comment"># Install: pip install openai</span>
+<span class="keyword">from</span> openai <span class="keyword">import</span> OpenAI, AsyncOpenAI
+<span class="keyword">import</span> asyncio
+
+<span class="comment"># Synchronous call</span>
+client = OpenAI()
+response = client.chat.completions.create(
+    model=<span class="string">"gpt-4-turbo"</span>,
+    messages=[
+        {<span class="string">"role"</span>: <span class="string">"system"</span>, <span class="string">"content"</span>: <span class="string">"You are a coding assistant"</span>},
+        {<span class="string">"role"</span>: <span class="string">"user"</span>, <span class="string">"content"</span>: <span class="string">"Write a REST API endpoint"</span>}
+    ]
+)
+<span class="function">print</span>(response.choices[0].message.content)
+
+<span class="comment"># Async with function calling</span>
+<span class="keyword">async def</span> <span class="function">function_calling_example</span>():
+    client = AsyncOpenAI()
+    tools = [{
+        <span class="string">"type"</span>: <span class="string">"function"</span>,
+        <span class="string">"function"</span>: {
+            <span class="string">"name"</span>: <span class="string">"get_weather"</span>,
+            <span class="string">"description"</span>: <span class="string">"Get weather for a location"</span>,
+            <span class="string">"parameters"</span>: {
+                <span class="string">"type"</span>: <span class="string">"object"</span>,
+                <span class="string">"properties"</span>: {<span class="string">"location"</span>: {<span class="string">"type"</span>: <span class="string">"string"</span>}},
+                <span class="string">"required"</span>: [<span class="string">"location"</span>]
+            }
+        }
+    }]
+    response = <span class="keyword">await</span> client.chat.completions.create(
+        model=<span class="string">"gpt-4-turbo"</span>,
+        messages=[{<span class="string">"role"</span>: <span class="string">"user"</span>, <span class="string">"content"</span>: <span class="string">"What's the weather in NYC?"</span>}],
+        tools=tools
+    )
+    <span class="keyword">return</span> response
+
+<span class="comment"># Agents SDK Example</span>
+<span class="keyword">from</span> agents <span class="keyword">import</span> Agent, Runner
+
+agent = Agent(
+    name=<span class="string">"CodeReviewer"</span>,
+    instructions=<span class="string">"Review code for security issues"</span>,
+    tools=[code_analysis_tool]
+)
+result = Runner.run_sync(agent, <span class="string">"Review this Python file"</span>)
+            </div>
+
+            <h3>Codex CLI Configuration</h3>
+            <div class="code-block">
+<span class="comment"># ~/.codex/config.toml</span>
+[mcp]
+servers = [
+    { name = "context7", type = "stdio", command = "npx context7" },
+    { name = "playwright", type = "stdio", command = "npx playwright-mcp" }
+]
+
+[agent]
+model = "gpt-4-turbo"
+max_tokens = 4096
+            </div>
+
+            <div class="links-section">
+                <h4>Resources</h4>
+                <a href="https://developers.openai.com/codex/mcp/" target="_blank">Codex MCP Documentation</a>
+                <a href="https://developers.openai.com/codex/guides/agents-sdk/" target="_blank">Agents SDK Guide</a>
+                <a href="https://openai.github.io/openai-agents-python/mcp/" target="_blank">MCP Integration</a>
+            </div>
+        </section>
+
+        <!-- Section 3: Google Gemini -->
+        <section id="gemini" class="platform-section">
+            <h2><span class="number">3</span> Google Gemini</h2>
+
+            <p>Google Gemini offers a comprehensive AI ecosystem with agents, native multimodal processing, and deep integration with Google Cloud services. The Gemini CLI and Agent Development Kit (ADK) enable sophisticated multi-agent workflows.</p>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4>Core Capabilities</h4>
+                    <ul>
+                        <li>Gemini 2.5 Pro and Flash models</li>
+                        <li>Native multimodal (text, image, audio, video)</li>
+                        <li>Up to 2M token context window</li>
+                        <li>Gemini CLI with agent mode</li>
+                        <li>Agent Development Kit (ADK)</li>
+                        <li>MCP server support</li>
+                        <li>Google Cloud integration</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h4>Agent Architecture</h4>
+                    <ul>
+                        <li>Agent Designer for visual agent building</li>
+                        <li>Multi-step agents with subagents</li>
+                        <li>A2A (Agent-to-Agent) Protocol</li>
+                        <li>Built-in system tools</li>
+                        <li>RESTful API integration</li>
+                        <li>Extensions marketplace</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pros-cons">
+                <div class="info-card pros">
+                    <h4>Advantages</h4>
+                    <ul>
+                        <li>Largest context window (2M tokens)</li>
+                        <li>Native multimodal processing</li>
+                        <li>Excellent Google Workspace integration</li>
+                        <li>Free tier available</li>
+                        <li>Strong enterprise features</li>
+                        <li>Agent-to-Agent protocol for interoperability</li>
+                    </ul>
+                </div>
+                <div class="info-card cons">
+                    <h4>Disadvantages</h4>
+                    <ul>
+                        <li>Less mature than OpenAI/Anthropic</li>
+                        <li>Some features Google Cloud only</li>
+                        <li>Regional availability limitations</li>
+                        <li>Fewer third-party integrations</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="when-to-use">
+                <h4>When to Use Google Gemini</h4>
+                <ul>
+                    <li>Very long context processing (up to 2M tokens)</li>
+                    <li>Native multimodal applications</li>
+                    <li>Google Workspace integration needs</li>
+                    <li>Android/Mobile development</li>
+                    <li>Cost-sensitive projects (free tier)</li>
+                </ul>
+            </div>
+
+            <p><strong>Execution Modes:</strong>
+                <span class="tag tag-async">Async</span>
+                <span class="tag tag-sync">Sync</span>
+                <span class="tag tag-parallel">Parallel Agents</span>
+                <span class="tag tag-hitl">Human-in-the-Loop</span>
+            </p>
+
+            <h3>Python SDK Example</h3>
+            <div class="code-block">
+<span class="comment"># Install: pip install google-generativeai</span>
+<span class="keyword">import</span> google.generativeai <span class="keyword">as</span> genai
+<span class="keyword">import</span> asyncio
+
+<span class="comment"># Configure API key</span>
+genai.configure(api_key=<span class="string">"YOUR_API_KEY"</span>)
+
+<span class="comment"># Synchronous generation</span>
+model = genai.GenerativeModel(<span class="string">"gemini-2.5-pro"</span>)
+response = model.generate_content(<span class="string">"Explain quantum computing"</span>)
+<span class="function">print</span>(response.text)
+
+<span class="comment"># Multimodal example (image + text)</span>
+<span class="keyword">import</span> PIL.Image
+image = PIL.Image.open(<span class="string">"diagram.png"</span>)
+response = model.generate_content([<span class="string">"Explain this diagram"</span>, image])
+<span class="function">print</span>(response.text)
+
+<span class="comment"># Streaming response</span>
+response = model.generate_content(<span class="string">"Write a long essay"</span>, stream=<span class="keyword">True</span>)
+<span class="keyword">for</span> chunk <span class="keyword">in</span> response:
+    <span class="function">print</span>(chunk.text, end=<span class="string">""</span>)
+
+<span class="comment"># Function calling</span>
+tools = [{
+    <span class="string">"function_declarations"</span>: [{
+        <span class="string">"name"</span>: <span class="string">"search_database"</span>,
+        <span class="string">"description"</span>: <span class="string">"Search the product database"</span>,
+        <span class="string">"parameters"</span>: {
+            <span class="string">"type"</span>: <span class="string">"object"</span>,
+            <span class="string">"properties"</span>: {<span class="string">"query"</span>: {<span class="string">"type"</span>: <span class="string">"string"</span>}}
+        }
+    }]
+}]
+model = genai.GenerativeModel(<span class="string">"gemini-2.5-pro"</span>, tools=tools)
+            </div>
+
+            <h3>Gemini CLI with Agent Mode</h3>
+            <div class="code-block">
+<span class="comment"># Install Gemini CLI</span>
+npm install -g @google/gemini-cli
+
+<span class="comment"># Start in agent mode</span>
+gemini --agent
+
+<span class="comment"># Use with MCP server</span>
+gemini --mcp-server "npx @mcp/database-server"
+
+<span class="comment"># Configure extensions</span>
+gemini extensions add sonarqube
+gemini extensions add terraform
+            </div>
+
+            <div class="links-section">
+                <h4>Resources</h4>
+                <a href="https://ai.google.dev/gemini-api/docs/tools" target="_blank">Tools & Agents Documentation</a>
+                <a href="https://developers.google.com/gemini-code-assist/docs/agent-mode" target="_blank">Agent Mode Overview</a>
+                <a href="https://geminicli.com/extensions/" target="_blank">Extensions Directory</a>
+            </div>
+        </section>
+
+        <!-- Section 4: OpenCode -->
+        <section id="opencode" class="platform-section">
+            <h2><span class="number">4</span> OpenCode</h2>
+
+            <p>OpenCode is an open-source AI coding agent built in Go, providing a powerful terminal UI for interacting with various AI models. With over 95,000 GitHub stars, it's one of the most popular open-source coding assistants.</p>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4>Core Capabilities</h4>
+                    <ul>
+                        <li>Terminal UI (TUI) interface</li>
+                        <li>75+ LLM provider support</li>
+                        <li>Local model support (Ollama)</li>
+                        <li>MCP protocol implementation</li>
+                        <li>Language Server Protocol (LSP)</li>
+                        <li>Built-in primary and subagents</li>
+                        <li>Desktop and IDE versions</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h4>Agent System</h4>
+                    <ul>
+                        <li><strong>Build Agent:</strong> Default agent with all tools enabled</li>
+                        <li><strong>Subagents:</strong> Specialized assistants for specific tasks</li>
+                        <li>@ mention to invoke subagents</li>
+                        <li>Custom agent creation</li>
+                        <li>Tool permission management</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pros-cons">
+                <div class="info-card pros">
+                    <h4>Advantages</h4>
+                    <ul>
+                        <li>Open source and free</li>
+                        <li>Supports 75+ LLM providers</li>
+                        <li>Works with local models</li>
+                        <li>Active community (2.5M+ users)</li>
+                        <li>Cross-platform (Terminal, IDE, Desktop)</li>
+                        <li>Privacy-focused options</li>
+                    </ul>
+                </div>
+                <div class="info-card cons">
+                    <h4>Disadvantages</h4>
+                    <ul>
+                        <li>Requires provider API keys</li>
+                        <li>Less polished than commercial options</li>
+                        <li>Steeper learning curve</li>
+                        <li>Variable quality across providers</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="when-to-use">
+                <h4>When to Use OpenCode</h4>
+                <ul>
+                    <li>Privacy-sensitive development (local models)</li>
+                    <li>When you need provider flexibility</li>
+                    <li>Open-source projects</li>
+                    <li>Cost-conscious development</li>
+                    <li>Terminal-centric workflows</li>
+                </ul>
+            </div>
+
+            <p><strong>Execution Modes:</strong>
+                <span class="tag tag-async">Async</span>
+                <span class="tag tag-sync">Sync</span>
+                <span class="tag tag-parallel">Parallel Subagents</span>
+            </p>
+
+            <h3>Installation & Usage</h3>
+            <div class="code-block">
+<span class="comment"># Install OpenCode</span>
+<span class="comment"># macOS/Linux</span>
+curl -fsSL https://opencode.ai/install.sh | sh
+
+<span class="comment"># Windows (PowerShell)</span>
+irm https://opencode.ai/install.ps1 | iex
+
+<span class="comment"># Start OpenCode</span>
+opencode
+
+<span class="comment"># Use with specific provider</span>
+opencode --provider anthropic --model claude-sonnet-4
+
+<span class="comment"># Use with local Ollama model</span>
+opencode --provider ollama --model llama3.2
+
+<span class="comment"># Invoke subagent with @ mention</span>
+<span class="comment"># In the TUI, type: @codereviewer check this file</span>
+            </div>
+
+            <h3>Configuration</h3>
+            <div class="code-block">
+<span class="comment"># ~/.opencode/config.yaml</span>
+provider: anthropic
+model: claude-sonnet-4
+
+mcp:
+  servers:
+    - name: database
+      command: npx @mcp/postgres-server
+    - name: github
+      command: npx @mcp/github-server
+
+agents:
+  default: build
+  custom:
+    - name: reviewer
+      instructions: "Review code for best practices"
+      tools: [read, grep, glob]
+            </div>
+
+            <div class="links-section">
+                <h4>Resources</h4>
+                <a href="https://opencode.ai/" target="_blank">Official Website</a>
+                <a href="https://github.com/opencode-ai/opencode" target="_blank">GitHub Repository</a>
+                <a href="https://opencode.ai/docs/agents/" target="_blank">Agents Documentation</a>
+                <a href="https://opencode.ai/docs/models/" target="_blank">Models Guide</a>
+            </div>
+        </section>
+
+        <!-- Section 5: Ollama -->
+        <section id="ollama" class="platform-section">
+            <h2><span class="number">5</span> Ollama Local Models</h2>
+
+            <p>Ollama enables running large language models locally with a simple interface. In 2025, Ollama introduced a new multimodal engine supporting image, speech, and video processing capabilities.</p>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4>Core Capabilities</h4>
+                    <ul>
+                        <li>Local LLM hosting</li>
+                        <li>Multimodal model support</li>
+                        <li>Image analysis (LLaVA, LLaMA Vision)</li>
+                        <li>Speech processing (MiniCPM-o)</li>
+                        <li>Video frame analysis</li>
+                        <li>REST API interface</li>
+                        <li>Model library with 100+ models</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h4>Available Models</h4>
+                    <ul>
+                        <li><strong>LLaMA 3.2:</strong> Meta's latest, 1B-90B params</li>
+                        <li><strong>LLaVA:</strong> Vision-language model</li>
+                        <li><strong>MiniCPM-o:</strong> Multimodal with speech</li>
+                        <li><strong>Qwen 2.5:</strong> Multilingual coding</li>
+                        <li><strong>DeepSeek:</strong> Code-specialized</li>
+                        <li><strong>Mistral:</strong> Fast inference</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pros-cons">
+                <div class="info-card pros">
+                    <h4>Advantages</h4>
+                    <ul>
+                        <li>Completely free and open source</li>
+                        <li>Full privacy (runs locally)</li>
+                        <li>No API costs or rate limits</li>
+                        <li>Works offline</li>
+                        <li>Simple installation</li>
+                        <li>Multimodal capabilities</li>
+                    </ul>
+                </div>
+                <div class="info-card cons">
+                    <h4>Disadvantages</h4>
+                    <ul>
+                        <li>Requires powerful hardware (GPU)</li>
+                        <li>Models smaller than cloud versions</li>
+                        <li>No native function calling</li>
+                        <li>Limited context windows</li>
+                        <li>Quality varies by model</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="when-to-use">
+                <h4>When to Use Ollama</h4>
+                <ul>
+                    <li>Privacy-critical applications</li>
+                    <li>Offline development needs</li>
+                    <li>Cost-sensitive projects</li>
+                    <li>Experimentation and learning</li>
+                    <li>Local multimodal processing</li>
+                </ul>
+            </div>
+
+            <p><strong>Execution Modes:</strong>
+                <span class="tag tag-sync">Sync</span>
+                <span class="tag tag-async">Async (via API)</span>
+            </p>
+
+            <h3>Installation & Basic Usage</h3>
+            <div class="code-block">
+<span class="comment"># Install Ollama</span>
+<span class="comment"># macOS/Linux</span>
+curl -fsSL https://ollama.com/install.sh | sh
+
+<span class="comment"># Windows - download from ollama.com</span>
+
+<span class="comment"># Pull a model</span>
+ollama pull llama3.2
+
+<span class="comment"># Pull vision model</span>
+ollama pull llava
+
+<span class="comment"># Run interactively</span>
+ollama run llama3.2
+
+<span class="comment"># Run with image</span>
+ollama run llava "Describe this image" --image ./photo.jpg
+            </div>
+
+            <h3>Python API Usage</h3>
+            <div class="code-block">
+<span class="comment"># Install: pip install ollama</span>
+<span class="keyword">import</span> ollama
+<span class="keyword">import</span> asyncio
+
+<span class="comment"># Synchronous chat</span>
+response = ollama.chat(
+    model=<span class="string">"llama3.2"</span>,
+    messages=[{<span class="string">"role"</span>: <span class="string">"user"</span>, <span class="string">"content"</span>: <span class="string">"Explain Python decorators"</span>}]
+)
+<span class="function">print</span>(response[<span class="string">"message"</span>][<span class="string">"content"</span>])
+
+<span class="comment"># Vision model with image</span>
+<span class="keyword">with</span> <span class="function">open</span>(<span class="string">"image.jpg"</span>, <span class="string">"rb"</span>) <span class="keyword">as</span> f:
+    image_data = f.read()
+
+response = ollama.chat(
+    model=<span class="string">"llava"</span>,
+    messages=[{
+        <span class="string">"role"</span>: <span class="string">"user"</span>,
+        <span class="string">"content"</span>: <span class="string">"What's in this image?"</span>,
+        <span class="string">"images"</span>: [image_data]
+    }]
+)
+
+<span class="comment"># Streaming response</span>
+<span class="keyword">for</span> chunk <span class="keyword">in</span> ollama.chat(
+    model=<span class="string">"llama3.2"</span>,
+    messages=[{<span class="string">"role"</span>: <span class="string">"user"</span>, <span class="string">"content"</span>: <span class="string">"Write a poem"</span>}],
+    stream=<span class="keyword">True</span>
+):
+    <span class="function">print</span>(chunk[<span class="string">"message"</span>][<span class="string">"content"</span>], end=<span class="string">""</span>)
+
+<span class="comment"># REST API example</span>
+<span class="keyword">import</span> requests
+response = requests.post(
+    <span class="string">"http://localhost:11434/api/generate"</span>,
+    json={<span class="string">"model"</span>: <span class="string">"llama3.2"</span>, <span class="string">"prompt"</span>: <span class="string">"Hello"</span>}
+)
+            </div>
+
+            <div class="links-section">
+                <h4>Resources</h4>
+                <a href="https://ollama.com/" target="_blank">Official Website</a>
+                <a href="https://ollama.com/library" target="_blank">Model Library</a>
+                <a href="https://github.com/ollama/ollama" target="_blank">GitHub Repository</a>
+                <a href="https://ollama.com/blog/multimodal-models" target="_blank">Multimodal Guide</a>
+            </div>
+        </section>
+
+        <!-- Section 6: N8n -->
+        <section id="n8n" class="platform-section">
+            <h2><span class="number">6</span> N8n Workflow Automation</h2>
+
+            <p>N8n is a fair-code workflow automation platform with native AI capabilities. By 2026, it has evolved into a full AI orchestration platform, enabling multi-step AI agents that integrate with 400+ applications.</p>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4>Core Capabilities</h4>
+                    <ul>
+                        <li>Visual workflow builder</li>
+                        <li>400+ native integrations</li>
+                        <li>AI Agent nodes with memory</li>
+                        <li>Tool-calling and reasoning</li>
+                        <li>Self-hosted or cloud options</li>
+                        <li>Custom code execution (JavaScript/Python)</li>
+                        <li>Webhook triggers</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h4>LLM Provider Support</h4>
+                    <ul>
+                        <li>OpenAI (GPT-4, GPT-3.5)</li>
+                        <li>Anthropic Claude</li>
+                        <li>Google Gemini</li>
+                        <li>HuggingFace models</li>
+                        <li>Local models via Ollama</li>
+                        <li>Cohere</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pros-cons">
+                <div class="info-card pros">
+                    <h4>Advantages</h4>
+                    <ul>
+                        <li>Visual, no-code interface</li>
+                        <li>Self-hosting option (full control)</li>
+                        <li>Fair-code license (free for most uses)</li>
+                        <li>400+ pre-built integrations</li>
+                        <li>AI agents with memory and tools</li>
+                        <li>Enterprise features (SSO, RBAC)</li>
+                    </ul>
+                </div>
+                <div class="info-card cons">
+                    <h4>Disadvantages</h4>
+                    <ul>
+                        <li>Learning curve for complex workflows</li>
+                        <li>Self-hosting requires maintenance</li>
+                        <li>Some enterprise features paid</li>
+                        <li>Less flexible than pure code</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="when-to-use">
+                <h4>When to Use N8n</h4>
+                <ul>
+                    <li>Business process automation with AI</li>
+                    <li>Non-technical team members building AI workflows</li>
+                    <li>Multi-system integration projects</li>
+                    <li>Self-hosted automation needs</li>
+                    <li>Rapid prototyping of AI agents</li>
+                </ul>
+            </div>
+
+            <p><strong>Execution Modes:</strong>
+                <span class="tag tag-async">Async</span>
+                <span class="tag tag-sync">Sync</span>
+                <span class="tag tag-hitl">Human-in-the-Loop</span>
+            </p>
+
+            <h3>Installation</h3>
+            <div class="code-block">
+<span class="comment"># Docker (recommended)</span>
+docker run -it --rm --name n8n -p 5678:5678 n8nio/n8n
+
+<span class="comment"># npm global install</span>
+npm install n8n -g
+n8n start
+
+<span class="comment"># Docker Compose with persistence</span>
+<span class="comment"># docker-compose.yml</span>
+version: '3'
+services:
+  n8n:
+    image: n8nio/n8n
+    ports:
+      - "5678:5678"
+    volumes:
+      - ~/.n8n:/home/node/.n8n
+    environment:
+      - N8N_BASIC_AUTH_ACTIVE=true
+      - N8N_BASIC_AUTH_USER=admin
+            </div>
+
+            <h3>AI Agent Workflow Example (JSON)</h3>
+            <div class="code-block">
+{
+  "nodes": [
+    {
+      "name": "AI Agent",
+      "type": "n8n-nodes-base.agent",
+      "parameters": {
+        "model": "gpt-4-turbo",
+        "systemMessage": "You are a helpful assistant",
+        "tools": ["web_search", "calculator"],
+        "memory": {
+          "type": "buffer",
+          "maxTokens": 2000
+        }
+      }
+    },
+    {
+      "name": "Slack",
+      "type": "n8n-nodes-base.slack",
+      "parameters": {
+        "operation": "sendMessage",
+        "channel": "#notifications"
+      }
+    }
+  ]
+}
+            </div>
+
+            <div class="step-by-step">
+                <h4>Creating an AI Agent Workflow</h4>
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <span>Create new workflow and add "AI Agent" node</span>
+                </div>
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <span>Configure LLM provider (OpenAI, Anthropic, etc.)</span>
+                </div>
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <span>Add tools (web search, database, APIs)</span>
+                </div>
+                <div class="step">
+                    <span class="step-number">4</span>
+                    <span>Enable memory for context retention</span>
+                </div>
+                <div class="step">
+                    <span class="step-number">5</span>
+                    <span>Connect trigger (webhook, schedule, etc.)</span>
+                </div>
+                <div class="step">
+                    <span class="step-number">6</span>
+                    <span>Add output nodes (Slack, email, database)</span>
+                </div>
+            </div>
+
+            <div class="links-section">
+                <h4>Resources</h4>
+                <a href="https://n8n.io/" target="_blank">Official Website</a>
+                <a href="https://n8n.io/ai/" target="_blank">AI Features</a>
+                <a href="https://github.com/n8n-io/n8n" target="_blank">GitHub Repository</a>
+                <a href="https://n8n.io/integrations/" target="_blank">Integrations Directory</a>
+            </div>
+        </section>
+
+        <!-- Section 7: Microsoft Agent Framework -->
+        <section id="microsoft-agent" class="platform-section">
+            <h2><span class="number">7</span> Microsoft Agent Framework</h2>
+
+            <p>The Microsoft Agent Framework unifies Semantic Kernel and AutoGen into a single open-source SDK for building, orchestrating, and deploying AI agents. It combines AutoGen's multi-agent patterns with Semantic Kernel's enterprise features.</p>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4>Core Components</h4>
+                    <ul>
+                        <li><strong>Semantic Kernel:</strong> Lightweight SDK for AI orchestration</li>
+                        <li><strong>AutoGen:</strong> Multi-agent system framework</li>
+                        <li>Graph-based workflows</li>
+                        <li>Session-based state management</li>
+                        <li>Type safety and telemetry</li>
+                        <li>Python and .NET support</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h4>Agent Features</h4>
+                    <ul>
+                        <li>Single and multi-agent patterns</li>
+                        <li>Human-in-the-loop capabilities</li>
+                        <li>Checkpointing and time-travel</li>
+                        <li>Streaming support</li>
+                        <li>Plugin architecture</li>
+                        <li>Memory management</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pros-cons">
+                <div class="info-card pros">
+                    <h4>Advantages</h4>
+                    <ul>
+                        <li>Unified framework (AutoGen + SK)</li>
+                        <li>Enterprise-grade features</li>
+                        <li>Strong .NET support</li>
+                        <li>Azure integration</li>
+                        <li>Open source</li>
+                        <li>Production-ready (GA Q1 2026)</li>
+                    </ul>
+                </div>
+                <div class="info-card cons">
+                    <h4>Disadvantages</h4>
+                    <ul>
+                        <li>Steep learning curve</li>
+                        <li>Framework is still maturing</li>
+                        <li>Complex for simple use cases</li>
+                        <li>Microsoft ecosystem lock-in risk</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="when-to-use">
+                <h4>When to Use Microsoft Agent Framework</h4>
+                <ul>
+                    <li>Enterprise multi-agent systems</li>
+                    <li>.NET/C# development teams</li>
+                    <li>Azure-based applications</li>
+                    <li>Complex workflow orchestration</li>
+                    <li>When you need human-in-the-loop</li>
+                </ul>
+            </div>
+
+            <p><strong>Execution Modes:</strong>
+                <span class="tag tag-async">Async</span>
+                <span class="tag tag-sync">Sync</span>
+                <span class="tag tag-parallel">Parallel Agents</span>
+                <span class="tag tag-hitl">Human-in-the-Loop</span>
+            </p>
+
+            <h3>Python Example (Semantic Kernel)</h3>
+            <div class="code-block">
+<span class="comment"># Install: pip install semantic-kernel</span>
+<span class="keyword">import</span> semantic_kernel <span class="keyword">as</span> sk
+<span class="keyword">from</span> semantic_kernel.connectors.ai.open_ai <span class="keyword">import</span> AzureChatCompletion
+<span class="keyword">from</span> semantic_kernel.agents <span class="keyword">import</span> ChatCompletionAgent
+<span class="keyword">import</span> asyncio
+
+<span class="comment"># Initialize kernel</span>
+kernel = sk.Kernel()
+
+<span class="comment"># Add AI service</span>
+kernel.add_service(AzureChatCompletion(
+    deployment_name=<span class="string">"gpt-4"</span>,
+    endpoint=<span class="string">"https://your-resource.openai.azure.com"</span>,
+    api_key=<span class="string">"your-api-key"</span>
+))
+
+<span class="comment"># Create agent</span>
+agent = ChatCompletionAgent(
+    kernel=kernel,
+    name=<span class="string">"CodeAssistant"</span>,
+    instructions=<span class="string">"You are a helpful coding assistant"</span>
+)
+
+<span class="comment"># Run agent</span>
+<span class="keyword">async def</span> <span class="function">main</span>():
+    response = <span class="keyword">await</span> agent.invoke(<span class="string">"Write a Python function to sort a list"</span>)
+    <span class="function">print</span>(response)
+
+asyncio.run(main())
+            </div>
+
+            <h3>Multi-Agent Example (AutoGen)</h3>
+            <div class="code-block">
+<span class="comment"># Install: pip install autogen-agentchat</span>
+<span class="keyword">from</span> autogen <span class="keyword">import</span> AssistantAgent, UserProxyAgent
+
+<span class="comment"># Create assistant agent</span>
+assistant = AssistantAgent(
+    name=<span class="string">"assistant"</span>,
+    llm_config={<span class="string">"model"</span>: <span class="string">"gpt-4-turbo"</span>}
+)
+
+<span class="comment"># Create user proxy (human-in-the-loop)</span>
+user_proxy = UserProxyAgent(
+    name=<span class="string">"user_proxy"</span>,
+    human_input_mode=<span class="string">"TERMINATE"</span>,
+    code_execution_config={<span class="string">"work_dir"</span>: <span class="string">"coding"</span>}
+)
+
+<span class="comment"># Start conversation</span>
+user_proxy.initiate_chat(
+    assistant,
+    message=<span class="string">"Create a data visualization of sales trends"</span>
+)
+
+<span class="comment"># Multi-agent collaboration</span>
+<span class="keyword">from</span> autogen <span class="keyword">import</span> GroupChat, GroupChatManager
+
+researcher = AssistantAgent(name=<span class="string">"researcher"</span>, ...)
+analyst = AssistantAgent(name=<span class="string">"analyst"</span>, ...)
+writer = AssistantAgent(name=<span class="string">"writer"</span>, ...)
+
+group_chat = GroupChat(agents=[researcher, analyst, writer, user_proxy])
+manager = GroupChatManager(groupchat=group_chat)
+            </div>
+
+            <div class="links-section">
+                <h4>Resources</h4>
+                <a href="https://github.com/microsoft/agent-framework" target="_blank">GitHub Repository</a>
+                <a href="https://learn.microsoft.com/en-us/semantic-kernel/frameworks/agent/" target="_blank">Agent Framework Docs</a>
+                <a href="https://devblogs.microsoft.com/semantic-kernel/" target="_blank">Semantic Kernel Blog</a>
+            </div>
+        </section>
+
+        <!-- Section 8: Microsoft Foundry -->
+        <section id="microsoft-foundry" class="platform-section">
+            <h2><span class="number">8</span> Microsoft Foundry (Azure AI)</h2>
+
+            <p>Microsoft Foundry is Azure's interoperable AI platform for building, deploying, and scaling production-grade AI agents. It combines model access, tools, and enterprise features into a unified service.</p>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4>Core Capabilities</h4>
+                    <ul>
+                        <li>Foundry Agent Service (GA)</li>
+                        <li>Multi-model support (GPT, Claude)</li>
+                        <li>1,400+ enterprise connections</li>
+                        <li>Foundry IQ for data grounding</li>
+                        <li>Multi-agent orchestration</li>
+                        <li>Deep Research capabilities</li>
+                        <li>Hosted agents (preview)</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h4>Enterprise Features</h4>
+                    <ul>
+                        <li>Foundry Control Plane</li>
+                        <li>Identity and policy management</li>
+                        <li>Observability and logging</li>
+                        <li>Content safety filters</li>
+                        <li>Azure security integration</li>
+                        <li>MCP tools support</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pros-cons">
+                <div class="info-card pros">
+                    <h4>Advantages</h4>
+                    <ul>
+                        <li>Access to both GPT and Claude models</li>
+                        <li>Enterprise-grade security</li>
+                        <li>1,400+ pre-built connectors</li>
+                        <li>Azure ecosystem integration</li>
+                        <li>Managed infrastructure</li>
+                        <li>Compliance certifications</li>
+                    </ul>
+                </div>
+                <div class="info-card cons">
+                    <h4>Disadvantages</h4>
+                    <ul>
+                        <li>Azure subscription required</li>
+                        <li>Can be expensive at scale</li>
+                        <li>Vendor lock-in concerns</li>
+                        <li>Complexity for simple projects</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="when-to-use">
+                <h4>When to Use Microsoft Foundry</h4>
+                <ul>
+                    <li>Enterprise AI deployments</li>
+                    <li>When you need both GPT and Claude</li>
+                    <li>Compliance-heavy industries</li>
+                    <li>Multi-agent business processes</li>
+                    <li>Azure-based infrastructure</li>
+                </ul>
+            </div>
+
+            <p><strong>Execution Modes:</strong>
+                <span class="tag tag-async">Async</span>
+                <span class="tag tag-sync">Sync</span>
+                <span class="tag tag-parallel">Multi-Agent</span>
+                <span class="tag tag-hitl">Human-in-the-Loop</span>
+            </p>
+
+            <h3>Python SDK Example</h3>
+            <div class="code-block">
+<span class="comment"># Install: pip install azure-ai-projects azure-identity</span>
+<span class="keyword">from</span> azure.ai.projects <span class="keyword">import</span> AIProjectClient
+<span class="keyword">from</span> azure.ai.projects.models <span class="keyword">import</span> Agent, AgentThread
+<span class="keyword">from</span> azure.identity <span class="keyword">import</span> DefaultAzureCredential
+
+<span class="comment"># Initialize client</span>
+client = AIProjectClient(
+    credential=DefaultAzureCredential(),
+    project_connection_string=<span class="string">"your-connection-string"</span>
+)
+
+<span class="comment"># Create an agent</span>
+agent = client.agents.create_agent(
+    model=<span class="string">"gpt-4-turbo"</span>,
+    name=<span class="string">"DataAnalyst"</span>,
+    instructions=<span class="string">"Analyze data and provide insights"</span>,
+    tools=[{<span class="string">"type"</span>: <span class="string">"code_interpreter"</span>}]
+)
+
+<span class="comment"># Create thread and run</span>
+thread = client.agents.create_thread()
+message = client.agents.create_message(
+    thread_id=thread.id,
+    role=<span class="string">"user"</span>,
+    content=<span class="string">"Analyze the attached sales data"</span>
+)
+
+run = client.agents.create_run(
+    thread_id=thread.id,
+    agent_id=agent.id
+)
+
+<span class="comment"># Wait for completion</span>
+<span class="keyword">while</span> run.status <span class="keyword">in</span> [<span class="string">"queued"</span>, <span class="string">"in_progress"</span>]:
+    run = client.agents.get_run(thread_id=thread.id, run_id=run.id)
+
+<span class="comment"># Get response</span>
+messages = client.agents.list_messages(thread_id=thread.id)
+<span class="function">print</span>(messages.data[0].content[0].text.value)
+            </div>
+
+            <div class="links-section">
+                <h4>Resources</h4>
+                <a href="https://azure.microsoft.com/en-us/products/ai-foundry" target="_blank">Microsoft Foundry</a>
+                <a href="https://learn.microsoft.com/en-us/azure/ai-foundry/agents/overview" target="_blank">Agent Service Docs</a>
+                <a href="https://devblogs.microsoft.com/foundry/" target="_blank">Foundry Blog</a>
+            </div>
+        </section>
+
+        <!-- Section 9: OpenClaw -->
+        <section id="openclaw" class="platform-section">
+            <h2><span class="number">9</span> OpenClaw (Clawdbot)</h2>
+
+            <p>OpenClaw (formerly Clawdbot, then Moltbot) is an open-source autonomous AI personal assistant that runs locally and integrates with messaging platforms. It's designed to "actually do things" - managing emails, calendars, and automating workflows.</p>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4>Core Capabilities</h4>
+                    <ul>
+                        <li>Local execution (privacy-focused)</li>
+                        <li>Persistent memory across sessions</li>
+                        <li>Email and calendar management</li>
+                        <li>Web browsing automation</li>
+                        <li>Multi-platform messaging support</li>
+                        <li>Workflow automation</li>
+                        <li>Cross-OS support</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h4>Messaging Integrations</h4>
+                    <ul>
+                        <li>WhatsApp</li>
+                        <li>Telegram</li>
+                        <li>Slack & Discord</li>
+                        <li>Google Chat</li>
+                        <li>Signal & iMessage</li>
+                        <li>Microsoft Teams</li>
+                        <li>Matrix & custom WebChat</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pros-cons">
+                <div class="info-card pros">
+                    <h4>Advantages</h4>
+                    <ul>
+                        <li>Open source (145K+ GitHub stars)</li>
+                        <li>Full local execution</li>
+                        <li>Persistent memory</li>
+                        <li>Multi-platform messaging</li>
+                        <li>Active community</li>
+                        <li>Autonomous task execution</li>
+                    </ul>
+                </div>
+                <div class="info-card cons">
+                    <h4>Disadvantages</h4>
+                    <ul>
+                        <li>Complex setup process</li>
+                        <li>Requires VPS for 24/7 operation</li>
+                        <li>Security concerns (computer control)</li>
+                        <li>Still maturing</li>
+                        <li>Resource intensive</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="when-to-use">
+                <h4>When to Use OpenClaw</h4>
+                <ul>
+                    <li>Personal AI assistant needs</li>
+                    <li>Privacy-critical environments</li>
+                    <li>Multi-platform messaging automation</li>
+                    <li>Self-hosted 24/7 assistant</li>
+                    <li>Task automation across applications</li>
+                </ul>
+            </div>
+
+            <p><strong>Execution Modes:</strong>
+                <span class="tag tag-async">Async</span>
+                <span class="tag tag-sync">Sync</span>
+                <span class="tag tag-hitl">Human-in-the-Loop</span>
+            </p>
+
+            <h3>Installation (Docker)</h3>
+            <div class="code-block">
+<span class="comment"># Clone repository</span>
+git clone https://github.com/clawdbot/clawdbot.git
+cd clawdbot
+
+<span class="comment"># Copy environment template</span>
+cp .env.example .env
+
+<span class="comment"># Edit .env with your API keys and settings</span>
+nano .env
+
+<span class="comment"># Start with Docker Compose</span>
+docker-compose up -d
+
+<span class="comment"># View logs</span>
+docker-compose logs -f
+            </div>
+
+            <h3>Configuration</h3>
+            <div class="code-block">
+<span class="comment"># .env configuration</span>
+OPENAI_API_KEY=sk-...
+ANTHROPIC_API_KEY=sk-ant-...
+
+<span class="comment"># Messaging platforms</span>
+TELEGRAM_BOT_TOKEN=...
+DISCORD_BOT_TOKEN=...
+SLACK_BOT_TOKEN=xoxb-...
+
+<span class="comment"># Memory settings</span>
+MEMORY_PATH=/data/memory
+PERSIST_MEMORY=true
+
+<span class="comment"># Model selection</span>
+DEFAULT_MODEL=claude-sonnet-4
+FALLBACK_MODEL=gpt-4-turbo
+            </div>
+
+            <div class="step-by-step">
+                <h4>Setting Up OpenClaw</h4>
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <span>Clone the repository and configure .env</span>
+                </div>
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <span>Add API keys for LLM providers</span>
+                </div>
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <span>Configure messaging platform tokens</span>
+                </div>
+                <div class="step">
+                    <span class="step-number">4</span>
+                    <span>Run docker-compose up -d</span>
+                </div>
+                <div class="step">
+                    <span class="step-number">5</span>
+                    <span>Message your bot on any connected platform</span>
+                </div>
+            </div>
+
+            <div class="links-section">
+                <h4>Resources</h4>
+                <a href="https://clawd.bot/" target="_blank">Official Website</a>
+                <a href="https://github.com/clawdbot/clawdbot" target="_blank">GitHub Repository</a>
+                <a href="https://en.wikipedia.org/wiki/OpenClaw" target="_blank">Wikipedia</a>
+            </div>
+        </section>
+
+        <!-- Section 10: Comparison -->
+        <section id="comparison" class="platform-section">
+            <h2><span class="number">10</span> Comparison & Technical Specifications</h2>
+
+            <h3>Context Window Comparison (February 2026)</h3>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Platform/Model</th>
+                        <th>Context Window</th>
+                        <th>Reliable Capacity</th>
+                        <th>~Words</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Llama 4</td>
+                        <td>10M tokens</td>
+                        <td>~7M tokens</td>
+                        <td>~5.2M</td>
+                    </tr>
+                    <tr>
+                        <td>Gemini 2.5 Pro</td>
+                        <td>2M tokens</td>
+                        <td>~1.5M tokens</td>
+                        <td>~1.1M</td>
+                    </tr>
+                    <tr>
+                        <td>GPT-5</td>
+                        <td>400K tokens</td>
+                        <td>~300K tokens</td>
+                        <td>~225K</td>
+                    </tr>
+                    <tr>
+                        <td>Claude Sonnet 4</td>
+                        <td>200K tokens (1M beta)</td>
+                        <td>~130K tokens</td>
+                        <td>~100K</td>
+                    </tr>
+                    <tr>
+                        <td>GPT-4 Turbo</td>
+                        <td>128K tokens</td>
+                        <td>~90K tokens</td>
+                        <td>~67K</td>
+                    </tr>
+                    <tr>
+                        <td>Ollama (Llama 3.2)</td>
+                        <td>128K tokens</td>
+                        <td>~90K tokens</td>
+                        <td>~67K</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Feature Comparison Matrix</h3>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Claude Code</th>
+                        <th>OpenAI</th>
+                        <th>Gemini</th>
+                        <th>OpenCode</th>
+                        <th>Ollama</th>
+                        <th>N8n</th>
+                        <th>MS Agent</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Async Support</td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                    </tr>
+                    <tr>
+                        <td>Parallel Calls</td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td><span class="badge badge-partial">Limited</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                    </tr>
+                    <tr>
+                        <td>Human-in-Loop</td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td><span class="badge badge-partial">Limited</span></td>
+                        <td><span class="badge badge-no">No</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                    </tr>
+                    <tr>
+                        <td>MCP Support</td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td><span class="badge badge-partial">Via MCP Server</span></td>
+                        <td><span class="badge badge-partial">Via plugins</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                    </tr>
+                    <tr>
+                        <td>Local Models</td>
+                        <td><span class="badge badge-no">No</span></td>
+                        <td><span class="badge badge-no">No</span></td>
+                        <td><span class="badge badge-no">No</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td><span class="badge badge-partial">Via Ollama</span></td>
+                    </tr>
+                    <tr>
+                        <td>Free Tier</td>
+                        <td><span class="badge badge-no">No</span></td>
+                        <td><span class="badge badge-partial">Limited</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td><span class="badge badge-partial">Azure credits</span></td>
+                    </tr>
+                    <tr>
+                        <td>Multimodal</td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td><span class="badge badge-yes">Native</span></td>
+                        <td><span class="badge badge-partial">Via provider</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td><span class="badge badge-partial">Via LLM</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                    </tr>
+                    <tr>
+                        <td>Sub-agents</td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td><span class="badge badge-no">No</span></td>
+                        <td><span class="badge badge-partial">Workflows</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Python SDK Quick Reference</h3>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Platform</th>
+                        <th>Package</th>
+                        <th>Install Command</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Claude/Anthropic</td>
+                        <td>anthropic</td>
+                        <td><code>pip install anthropic</code></td>
+                    </tr>
+                    <tr>
+                        <td>OpenAI</td>
+                        <td>openai</td>
+                        <td><code>pip install openai</code></td>
+                    </tr>
+                    <tr>
+                        <td>Google Gemini</td>
+                        <td>google-generativeai</td>
+                        <td><code>pip install google-generativeai</code></td>
+                    </tr>
+                    <tr>
+                        <td>Ollama</td>
+                        <td>ollama</td>
+                        <td><code>pip install ollama</code></td>
+                    </tr>
+                    <tr>
+                        <td>Semantic Kernel</td>
+                        <td>semantic-kernel</td>
+                        <td><code>pip install semantic-kernel</code></td>
+                    </tr>
+                    <tr>
+                        <td>AutoGen</td>
+                        <td>autogen-agentchat</td>
+                        <td><code>pip install autogen-agentchat</code></td>
+                    </tr>
+                    <tr>
+                        <td>Azure AI</td>
+                        <td>azure-ai-projects</td>
+                        <td><code>pip install azure-ai-projects</code></td>
+                    </tr>
+                    <tr>
+                        <td>LiteLLM (Universal)</td>
+                        <td>litellm</td>
+                        <td><code>pip install litellm</code></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Universal Python Example (LiteLLM)</h3>
+            <div class="code-block">
+<span class="comment"># LiteLLM: Call 100+ LLM APIs with unified interface</span>
+<span class="comment"># Install: pip install litellm</span>
+<span class="keyword">from</span> litellm <span class="keyword">import</span> completion, acompletion
+<span class="keyword">import</span> asyncio
+
+<span class="comment"># Call different providers with same interface</span>
+<span class="comment"># Claude</span>
+response = completion(
+    model=<span class="string">"claude-sonnet-4-20250514"</span>,
+    messages=[{<span class="string">"role"</span>: <span class="string">"user"</span>, <span class="string">"content"</span>: <span class="string">"Hello"</span>}]
+)
+
+<span class="comment"># OpenAI</span>
+response = completion(
+    model=<span class="string">"gpt-4-turbo"</span>,
+    messages=[{<span class="string">"role"</span>: <span class="string">"user"</span>, <span class="string">"content"</span>: <span class="string">"Hello"</span>}]
+)
+
+<span class="comment"># Gemini</span>
+response = completion(
+    model=<span class="string">"gemini/gemini-2.5-pro"</span>,
+    messages=[{<span class="string">"role"</span>: <span class="string">"user"</span>, <span class="string">"content"</span>: <span class="string">"Hello"</span>}]
+)
+
+<span class="comment"># Ollama (local)</span>
+response = completion(
+    model=<span class="string">"ollama/llama3.2"</span>,
+    messages=[{<span class="string">"role"</span>: <span class="string">"user"</span>, <span class="string">"content"</span>: <span class="string">"Hello"</span>}]
+)
+
+<span class="comment"># Async parallel calls to multiple providers</span>
+<span class="keyword">async def</span> <span class="function">parallel_providers</span>():
+    tasks = [
+        acompletion(model=<span class="string">"claude-sonnet-4-20250514"</span>, messages=[...]),
+        acompletion(model=<span class="string">"gpt-4-turbo"</span>, messages=[...]),
+        acompletion(model=<span class="string">"gemini/gemini-2.5-pro"</span>, messages=[...])
+    ]
+    results = <span class="keyword">await</span> asyncio.gather(*tasks)
+    <span class="keyword">return</span> results
+            </div>
+
+            <h3>Memory & State Management Comparison</h3>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Platform</th>
+                        <th>Memory Type</th>
+                        <th>Persistence</th>
+                        <th>Scope</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Claude Code</td>
+                        <td>MEMORY.md files</td>
+                        <td>File-based</td>
+                        <td>Project/Global</td>
+                    </tr>
+                    <tr>
+                        <td>OpenAI Agents</td>
+                        <td>Thread-based</td>
+                        <td>API-managed</td>
+                        <td>Conversation</td>
+                    </tr>
+                    <tr>
+                        <td>Gemini</td>
+                        <td>Chat history</td>
+                        <td>Session-based</td>
+                        <td>Conversation</td>
+                    </tr>
+                    <tr>
+                        <td>N8n</td>
+                        <td>Buffer memory</td>
+                        <td>Workflow-based</td>
+                        <td>Workflow</td>
+                    </tr>
+                    <tr>
+                        <td>MS Agent Framework</td>
+                        <td>Session state</td>
+                        <td>Checkpointing</td>
+                        <td>Agent/Workflow</td>
+                    </tr>
+                    <tr>
+                        <td>OpenClaw</td>
+                        <td>Local files</td>
+                        <td>Persistent</td>
+                        <td>User</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <footer>
+            <p>Comprehensive AI Platforms Research | Generated February 2026</p>
+            <p>Data compiled from official documentation, research, and community sources</p>
+            <p style="margin-top: 15px; font-size: 0.8rem;">
+                <strong>Sources:</strong>
+                <a href="https://code.claude.com/docs" target="_blank">Claude Code Docs</a> |
+                <a href="https://developers.openai.com" target="_blank">OpenAI Developers</a> |
+                <a href="https://ai.google.dev" target="_blank">Google AI</a> |
+                <a href="https://opencode.ai" target="_blank">OpenCode</a> |
+                <a href="https://ollama.com" target="_blank">Ollama</a> |
+                <a href="https://n8n.io" target="_blank">N8n</a> |
+                <a href="https://learn.microsoft.com" target="_blank">Microsoft Learn</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
